@@ -19,9 +19,10 @@
    dd if=/root/u-boot.mbn of=/dev/mmcblk0p14
    ```
 6.   网线lan口直连电脑，并且电脑设为同一ip段
-      关机~按着reset键~然后开机直至看到蓝灯，进入192.168.68.1后刷机等变绿灯
+      关机-按着reset键-然后开机直至看到蓝灯，进入192.168.68.1后刷机等变绿灯
 
 [插件安装：](https://op.dllkids.xyz/packages/)
+[参考文章：](https://post.smzdm.com/p/a96dez8p/)
    
 
 
