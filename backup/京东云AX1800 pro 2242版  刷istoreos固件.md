@@ -20,7 +20,7 @@
    ```
 6.   网线lan口直连电脑，并且电脑设为同一ip段
       关机-按着reset键-然后开机直至看到蓝灯，进入192.168.68.1后刷机等变绿灯
-![uboot](https://github.com/user-attachments/assets/41abeed1-4ee1-42f8-8167-bfacd47fec75|400)
+![uboot](https://github.com/user-attachments/assets/41abeed1-4ee1-42f8-8167-bfacd47fec75)
 ![uboot版本](https://github.com/user-attachments/assets/a1ab92a1-a784-4b42-94df-12a99b621bab)
 ![捕2获](https://github.com/user-attachments/assets/d56886ca-a5f6-4bbb-b33d-b0a3607634fb)
 ![底包及升级包](https://github.com/user-attachments/assets/438b0474-7cfe-48f3-9dcf-7e217fa1f366)
