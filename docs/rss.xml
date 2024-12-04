@@ -1,45 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Sky笔记</title><link>https://skyworld2020.github.io/sky.github.io</link><description>学习是思想的沉淀，生活的冥想</description><copyright>Sky笔记</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/57595480?v=4</url><title>avatar</title><link>https://skyworld2020.github.io/sky.github.io</link></image><lastBuildDate>Wed, 20 Nov 2024 02:06:05 +0000</lastBuildDate><managingEditor>Sky笔记</managingEditor><ttl>60</ttl><webMaster>Sky笔记</webMaster><item><title>测试</title><link>https://skyworld2020.github.io/sky.github.io/post/ce-shi.html</link><description>为什么第4章节没显示，。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/ce-shi.html</guid><pubDate>Wed, 20 Nov 2024 02:05:43 +0000</pubDate></item><item><title>Yt-dlp的安装使用</title><link>https://skyworld2020.github.io/sky.github.io/post/Yt-dlp-de-an-zhuang-shi-yong.html</link><description>1. 首先复制[chocolatey](https://chocolatey.org/install)的安装命令(也可以Python环境的pip安装）&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Sky笔记</title><link>https://skyworld2020.github.io/sky.github.io</link><description>学习是思想的沉淀，生活的冥想</description><copyright>Sky笔记</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/57595480?v=4</url><title>avatar</title><link>https://skyworld2020.github.io/sky.github.io</link></image><lastBuildDate>Wed, 04 Dec 2024 15:49:14 +0000</lastBuildDate><managingEditor>Sky笔记</managingEditor><ttl>60</ttl><webMaster>Sky笔记</webMaster><item><title>测试</title><link>https://skyworld2020.github.io/sky.github.io/post/ce-shi.html</link><description>为什么第4章节没显示，。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/ce-shi.html</guid><pubDate>Wed, 20 Nov 2024 02:05:43 +0000</pubDate></item><item><title>Yt-dlp的安装使用</title><link>https://skyworld2020.github.io/sky.github.io/post/Yt-dlp-de-an-zhuang-shi-yong.html</link><description>1. 首先复制[chocolatey](https://chocolatey.org/install)的安装命令(也可以Python环境的pip安装）&#13;
     &#13;
 ![yt-dlp1](https://github.com/user-attachments/assets/7a05a86e-e795-40ac-ae6e-1e5cf0451e52)&#13;
 &#13;
 2. 在WIN的power shell 管理员模式下粘贴上述命令，回车&#13;
 3. 安裝 yt-dlp 指令   `choco install -y yt-dlp ffmpeg lame`  若更新则`choco upgrade -y chocolatey yt-dlp ffmpeg lame`&#13;
-4. 在下载目录地址，直接cmd就可以进入当前下载文件夹。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/Yt-dlp-de-an-zhuang-shi-yong.html</guid><pubDate>Mon, 21 Oct 2024 15:27:16 +0000</pubDate></item><item><title>T12电烙铁</title><link>https://skyworld2020.github.io/sky.github.io/post/T12-dian-luo-tie.html</link><description> 闲鱼T12电烙铁一套，配一条二手白光烙铁头，B2尖头(或B型尖锥头)，全新分立式(或贴片式)主控板使用 大功率mos管，24v电源(电源足功率，是二手适配器拆机)，全新外壳，全新手柄(黑色)，抗高温软硅胶线，不是那些使用普通多芯线可比的。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/T12-dian-luo-tie.html</guid><pubDate>Wed, 24 Jul 2024 04:45:05 +0000</pubDate></item><item><title>京东云AX1800 pro 2242版  刷istoreos固件</title><link>https://skyworld2020.github.io/sky.github.io/post/jing-dong-yun-AX1800%20pro%202242-ban-%20%20-shua-istoreos-gu-jian.html</link><description>1. U盘做2个ext4分区，sda1，sda5&#13;
-2. 浏览器停止自动更新，U盘插入N1或虚拟机openwrt环境，用ssl远程登入写入软链接&#13;
-    `lsblk`               #确认以上2个分区&#13;
-    ```python&#13;
-    ln -s /etc/rc.local /mnt/sda5/rc.local&#13;
-    ln -s /etc/init.d/done  /mnt/sda5/done&#13;
-    ```&#13;
-3. 京东云app~智能加速服务：挂载sda1分区&#13;
-4. 开启webdav，修改sda5文件&#13;
-   地址:56589或56590&#13;
-   &#13;
-   修改文件**rc.local**，增加/usr/sbin/dropbear`&#13;
-   修改文件**done**，14-16行取消#&#13;
-5. SSL远程进入，刷uboot不死，注意的是不同uboot未必都能刷进，以下是线上安装的uboot&#13;
- &#13;
-   ```java&#13;
-   curl -o u-boot.mbn http://oss-hk4.oss-cn-hongkong.aliyuncs.com/tmp/u-boot.mbn&#13;
-   dd if=/root/u-boot.mbn of=/dev/mmcblk0p13&#13;
-   dd if=/root/u-boot.mbn of=/dev/mmcblk0p14&#13;
-   ```&#13;
-6.   网线lan口直连电脑，并且电脑设为同一ip段&#13;
-      关机-按着reset键-然后开机直至看到蓝灯，进入192.168.68.1后刷机等变绿灯&#13;
-![uboot](https://github.com/user-attachments/assets/41abeed1-4ee1-42f8-8167-bfacd47fec75)&#13;
-![uboot版本](https://github.com/user-attachments/assets/a1ab92a1-a784-4b42-94df-12a99b621bab)&#13;
-![捕2获](https://github.com/user-attachments/assets/d56886ca-a5f6-4bbb-b33d-b0a3607634fb)&#13;
-![底包及升级包](https://github.com/user-attachments/assets/438b0474-7cfe-48f3-9dcf-7e217fa1f366)&#13;
-![端口](https://github.com/user-attachments/assets/88843f32-11e3-4d0c-bcc0-e197e52b8298)&#13;
-![工厂](https://github.com/user-attachments/assets/ed025a97-67a3-4014-aa2d-d6c73a63f5e2)&#13;
-![路由自带刷机](https://github.com/user-attachments/assets/d9bfaa06-b485-4aa1-8db5-100b2466cfc0)&#13;
-![升级](https://github.com/user-attachments/assets/f4fe7c97-b247-4a16-bf95-58f74f80104d)&#13;
-&#13;
-&#13;
-[插件安装：](https://op.dllkids.xyz/packages/)&#13;
-[参考文章：](https://post.smzdm.com/p/a96dez8p/)&#13;
-   &#13;
-&#13;
-&#13;
-。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/jing-dong-yun-AX1800%20pro%202242-ban-%20%20-shua-istoreos-gu-jian.html</guid><pubDate>Fri, 28 Jun 2024 00:34:36 +0000</pubDate></item><item><title>我系Sky</title><link>https://skyworld2020.github.io/sky.github.io/post/wo-xi-Sky.html</link><description>学习是持续的过程，就像探索一片未知的森林，偶尔会被社会烦躁声音的打搅 ，但只有学习才是思想上最纯粹的冥想。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/wo-xi-Sky.html</guid><pubDate>Wed, 26 Jun 2024 23:52:53 +0000</pubDate></item></channel></rss>
+4. 在下载目录地址，直接cmd就可以进入当前下载文件夹。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/Yt-dlp-de-an-zhuang-shi-yong.html</guid><pubDate>Mon, 21 Oct 2024 15:27:16 +0000</pubDate></item><item><title>T12电烙铁</title><link>https://skyworld2020.github.io/sky.github.io/post/T12-dian-luo-tie.html</link><description> 闲鱼T12电烙铁一套，配一条二手白光烙铁头，B2尖头(或B型尖锥头)，全新分立式(或贴片式)主控板使用 大功率mos管，24v电源(电源足功率，是二手适配器拆机)，全新外壳，全新手柄(黑色)，抗高温软硅胶线，不是那些使用普通多芯线可比的。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/T12-dian-luo-tie.html</guid><pubDate>Wed, 24 Jul 2024 04:45:05 +0000</pubDate></item><item><title>京东云AX1800 pro 2242版  刷istoreos固件</title><link>https://skyworld2020.github.io/sky.github.io/post/jing-dong-yun-AX1800%20pro%202242-ban-%20%20-shua-istoreos-gu-jian.html</link><description>1. 拆外壳，顶盖用卡片直接撬，散热片天线不用取下。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/jing-dong-yun-AX1800%20pro%202242-ban-%20%20-shua-istoreos-gu-jian.html</guid><pubDate>Fri, 28 Jun 2024 00:34:36 +0000</pubDate></item><item><title>我系Sky</title><link>https://skyworld2020.github.io/sky.github.io/post/wo-xi-Sky.html</link><description>学习是持续的过程，就像探索一片未知的森林，偶尔会被社会烦躁声音的打搅 ，但只有学习才是思想上最纯粹的冥想。</description><guid isPermaLink="true">https://skyworld2020.github.io/sky.github.io/post/wo-xi-Sky.html</guid><pubDate>Wed, 26 Jun 2024 23:52:53 +0000</pubDate></item></channel></rss>

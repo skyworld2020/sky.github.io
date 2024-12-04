@@ -1,33 +1,25 @@
-1. U盘做2个ext4分区，sda1，sda5
-2. 浏览器停止自动更新，U盘插入N1或虚拟机openwrt环境，用ssl远程登入写入软链接
-    `lsblk`               #确认以上2个分区
-    ```python
-    ln -s /etc/rc.local /mnt/sda5/rc.local
-    ln -s /etc/init.d/done  /mnt/sda5/done
-    ```
-3. 京东云app~智能加速服务：挂载sda1分区
-4. 开启webdav，修改sda5文件
-   地址:56589或56590
+1. 拆外壳，顶盖用卡片直接撬，散热片天线不用取下。准备双USB头线，短接镊子。
+2. 必备软件（USB驱程，任务管理器快捷方式，usb写入）
+  
+![11](https://github.com/user-attachments/assets/a06d3673-9dd6-4e87-a5b6-7a9f2105b8ac)
+
+3. 接好双头usb线，插上电源（先不通电），短接后再通电
+![11](https://github.com/user-attachments/assets/921e8e4a-d638-4208-b5f2-c4b95416aaa5)
+
+4. 接通提示音后，设备管理器~端口会显示com口数，之后可放开短接
+ ![image](https://github.com/user-attachments/assets/619c1caf-4b86-43a5-8615-057c107e6e7e)
+
+5. 运行“usb工具”~选择型号，com口后回车，第一次继续，设备管理器界面刷新2次后，等约5s会红灯
+   闪烁，马上长按reset健直到蓝灯常亮再松开
    
-   修改文件**rc.local**，增加/usr/sbin/dropbear`
-   修改文件**done**，14-16行取消#
-5. SSL远程进入，刷uboot不死，注意的是不同uboot未必都能刷进，以下是线上安装的uboot
- 
-   ```java
-   curl -o u-boot.mbn http://oss-hk4.oss-cn-hongkong.aliyuncs.com/tmp/u-boot.mbn
-   dd if=/root/u-boot.mbn of=/dev/mmcblk0p13
-   dd if=/root/u-boot.mbn of=/dev/mmcblk0p14
-   ```
-6.   网线lan口直连电脑，并且电脑设为同一ip段
-      关机-按着reset键-然后开机直至看到蓝灯，进入192.168.68.1后刷机等变绿灯
-![uboot](https://github.com/user-attachments/assets/41abeed1-4ee1-42f8-8167-bfacd47fec75)
-![uboot版本](https://github.com/user-attachments/assets/a1ab92a1-a784-4b42-94df-12a99b621bab)
-![捕2获](https://github.com/user-attachments/assets/d56886ca-a5f6-4bbb-b33d-b0a3607634fb)
-![底包及升级包](https://github.com/user-attachments/assets/438b0474-7cfe-48f3-9dcf-7e217fa1f366)
-![端口](https://github.com/user-attachments/assets/88843f32-11e3-4d0c-bcc0-e197e52b8298)
-![工厂](https://github.com/user-attachments/assets/ed025a97-67a3-4014-aa2d-d6c73a63f5e2)
-![路由自带刷机](https://github.com/user-attachments/assets/d9bfaa06-b485-4aa1-8db5-100b2466cfc0)
-![升级](https://github.com/user-attachments/assets/f4fe7c97-b247-4a16-bf95-58f74f80104d)
+6. 断开usb双头线，本机地址改192.168.1.x，网线连lan口，网页登录192.168.1.1，登录到不死uboot界
+   面上传固件
+ ![uboot版本](https://github.com/user-attachments/assets/a1ab92a1-a784-4b42-94df-12a99b621bab)
+
+7.  等一段时间内，检查ip地址有否更改，本机地址改为自动获取，进入192.168.68.1
+
+
+
 
 
 [插件安装：](https://op.dllkids.xyz/packages/)
