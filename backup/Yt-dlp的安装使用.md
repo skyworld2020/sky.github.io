@@ -1,3 +1,7 @@
+总结：
+- **yt-dlp**：可以通过（Python环境下的） `pip`或者  `Chocolatey` 安装。 
+- **FFmpeg**：可以通过 `Chocolatey` 安装，或者手动下载并配置环境变量
+
 1. 首先复制[chocolatey](https://chocolatey.org/install)的安装命令(也可以Python环境的pip安装）
     
 ![yt-dlp1](https://github.com/user-attachments/assets/7a05a86e-e795-40ac-ae6e-1e5cf0451e52)
